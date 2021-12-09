@@ -4,6 +4,7 @@ metadata:
   name: intelhistory-flux
   namespace: microsites-pre
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: intelhistory-flux
