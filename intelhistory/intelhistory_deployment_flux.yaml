@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: intelhistory-flux
-  namespace: microsites-pre
+  namespace: default
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: intelhistory-flux

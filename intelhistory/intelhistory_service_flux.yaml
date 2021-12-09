@@ -1,17 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: intelhistory-flux-lb
-  namespace: microsites-pre
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
-    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
-    service.beta.kubernetes.io/aws-load-balancer-type: external
+  name: intelhistory-flux
+  namespace: default
 spec:
+  ports:
+  - port: 80
+    targetPort: 3000
+    protocol: TCP
+  type: NodePort
   selector:
     app.kubernetes.io/name: intelhistory-flux
-  type: LoadBalancer
-  ports:
-  - name: http
-    port: 80
-    targetPort: 3000
