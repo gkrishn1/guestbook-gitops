@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: intelhistory-flux
-  namespace: default
+  namespace: microsites-pre
 spec:
   selector:
     matchLabels:
